@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Molecular Distance Maps (MoD Maps)</title>
+    <link rel="stylesheet" type="text/css" href="gmdm.css">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script type="text/javascript" src="gmdm.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  </head>
+    <script>
+    $(function(){$("body").on("keydown", function (e) {var key = e.which || e.keyCode;
+            if (key == 13) {$("#drawmdm").click();}});});
+    </script>
+
+<!-- Histats.com  START (hidden counter)-->
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
+<a href="http://www.histats.com" target="_blank" title="web stats" ><script  type="text/javascript" >
+try {Histats.start(1,2666795,4,0,0,0,"");
+Histats.track_hits();} catch(err){};
+</script></a>
+<noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?2666795&101" alt="web stats" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+ <body>
+  
+<div id="sidemenu">
+  <div id="title">
+    <strong><em>Molecular Distance (MoD) Map</em></strong>
+  </div>
+
+  <div id="settings"> 
+    <strong>Map:&#160;&#160;</strong><select id="loadfile"> 
+          <!--<option value="0">0) Sample Map File</option>-->
+          <option value="2">1) Vertebrates (1791)</option>
+          <option value="1">2) Protists (70)</option>
+          <option value="3">3) Mam-Ins-Amph (790)</option>
+          <option value="4">4) Amphibians (112)</option>
+          <!--<option value="5">5) Insects (307)</option>-->
+          <option value="6">5) Primates (62)</option>
+          <!-- <option value="7">7) 6 Kingdoms (SSIM)</option>
+          <option value="8">8) 6 Kingdoms (Descr.)</option> -->
+          </select>
+    Show only one popup at a time: <input id="manyinfowindows" type="checkbox" onchange="checkForPopups();" unchecked><br/>
+          <div id="settingsaction">
+            <input type="submit" id="drawmdm" onclick="loadXMLDoc();" value="Draw MoD Map!"/>
+          </div>
+  </div>
+
+  <div id="tooltipinfo"> 
+    <div id="viewfile"><strong>Dataset: - </strong></div>
+    <strong>From:</strong>
+    <input id="fromHereToShow" maxlength="7" size="7" disabled />
+    <input id="fromHere" maxlength="7" size="7" disabled style="visibility:hidden" /><br/>
+    <strong>To:&#160;&#160;&#160;&#160;</strong>
+    <input id="toHereToShow" maxlength="7" size="7" disabled />
+    <input id="toHere" maxlength="7" size="7" disabled style="visibility:hidden" /><br/>
+   <strong>Distance:</strong>
+   <input id="outputDist" type="text" value="" maxlength="10" size="15" disabled /><br/>
+    <div id="computeDist"></div>
+    <div id="searchinfo">
+      <strong>Search:&#160;&#160;&#160;</strong>
+      <input id="tosearch" type="text" onkeyup="startSearch();" onfocus="startSearch();" value="" maxlength="15" size="15" disabled />
+    </div>
+      
+    <div id="searchstatus"></div>
+
+    <p hidden id="temp" class="debug"></p>
+  </div>
+  <div id="compatibilityinfo">
+    <table>
+      <th colspan="1">We want to hear your <a href="https://docs.google.com/forms/d/1JCUhrhjCYM_7nCfIFtmziB-OmuMZrfn2-1G63pj9Gv0/viewform" target="_blank">feedback</a>.</th>
+      <tr></tr>
+    </table>
+  
+  </div>
+
+</div>
+  <div id="map-canvas" style="border:2px solid #000000;"></div>
+  <div id="mylegend"></div>
+
+ </body>
+</html>
+

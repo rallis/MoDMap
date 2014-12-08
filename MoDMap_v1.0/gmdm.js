@@ -7,8 +7,7 @@
 % (MoD Maps). Please refer to the following paper for suggested usage
 %
 % L.Kari, K.Hill, A.Sayem, R.Karamichalis, N.Bryans, K.Davis, N.Dattani
-% "Measuring and visualizing genetic sequence structural similarity
-% using graphic genomic signatures"
+% "Mapping the Space of Genomic Signatures"
 %
 % Kindly report any suggestions or corrections.
 %---------------------------------------------------------------------*/
@@ -25,7 +24,7 @@ var globalPointsLabels;
 var legendColors, legendLabels;
 var dbg=false;  // if true shows many dbg msges
 var allAccessionNums, allNames; // contains all the accesion numbers and names for searching
-var map; // the google map itself
+var map; 
 var excelsheets=[
 'https://docs.google.com/spreadsheets/d/1VwSfJwacFwa3XsfF7XHqShELv-9UXyyY2_eRuDSYJo4/edit?usp=sharing',
 'https://docs.google.com/spreadsheets/d/1p16Alqtpw3gom-TpVF-l4HgwE7wEy4yQAOtmpeBHvXc/edit?usp=sharing',
@@ -51,7 +50,7 @@ var lastMarkerClicked;
 var allowOnlyOneInfoWindow;
 
 
-// settings for map
+// settings for the map
 function CoordMapType() {}
 CoordMapType.prototype.tileSize = new google.maps.Size(256,256);
 CoordMapType.prototype.maxZoom = 20;

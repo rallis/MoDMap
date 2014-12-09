@@ -6,8 +6,8 @@
 % This is a vizualization tool for creating Molecular Distance Maps
 % (MoD Maps). Please refer to the following paper for suggested usage
 %
+% "Mapping the Space of Genomic Signatures" by
 % L.Kari, K.Hill, A.Sayem, R.Karamichalis, N.Bryans, K.Davis, N.Dattani
-% "Mapping the Space of Genomic Signatures"
 %
 % Kindly report any suggestions or corrections.
 %---------------------------------------------------------------------*/

@@ -8,6 +8,7 @@
 %
 % "Mapping the Space of Genomic Signatures" by
 % L.Kari, K.Hill, A.Sayem, R.Karamichalis, N.Bryans, K.Davis, N.Dattani
+% DOI: 10.1371/journal.pone.0119815
 %
 % Kindly report any suggestions or corrections.
 %---------------------------------------------------------------------*/
